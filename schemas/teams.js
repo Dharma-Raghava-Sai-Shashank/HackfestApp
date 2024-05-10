@@ -41,7 +41,7 @@ const teamSchema = mongoose.Schema({
   },
   man_hours:{
     type:String,
-    default:"36 Hours 00 Minutes"
+    default:"00 Hours 00 Minutes"
   },
   refreshment_counter: {
     type: Number,

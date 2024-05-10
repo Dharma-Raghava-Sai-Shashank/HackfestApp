@@ -35,6 +35,10 @@ app.post('/change_password', async (req, res) => {
     return res.status(400).json({ message: 'Incorrect password' })
   }
 })
+app.get('/del',async(req,res)=>{
+  console.log("Delete started ...")
+  await User.deleteMany({username : { $ne: "admin@admin.com" }});
+})
 app.post('/login', (req, res) => {
   const { Player_Email, password } = req.body
 
